@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="weather-container">
+        <div id="landing-page" class="page active">
+            <h1>Weather App</h1>
+            <form id="city-form" class="location-form">
+                <div class="input-group">
+                    <input type="text" id="city-input" placeholder="Enter city name">
+                    <button class="submit-btn">Submit</button>
+                </div>
+                <p>or</p>
+                <button id="location-btn" class="location-btn">Get Device Location</button>
+            </form>
+        </div>
+        <div id="weather-page" class="page hidden">
+            <button id="back-btn" class="back-btn"><i class="material-icons">arrow_back</i></button>
+            <h1>Weather App</h1>
+            <div class="location-date-section">
+                <h2 class="location-name">Location</h2>
+                <p class="current-date">Date</p>
+            </div>
+            <div class="weather-info">
+                <div class="weather-description">
+                    <i class="material-icons">wb_sunny</i>
+                    <span class="weather-condition">Condition</span>
+                </div>
+                <div class="temperature">Temperature</div>
+            </div>
+            <div class="additional-info">
+                <div class="feels-like-info">
+                    <i class="material-icons">thermostat</i>
+                    <div>
+                        <h3 class="feels-like-temp">Feels Like</h3>
+                    </div>
+                </div>
+                <div class="humidity-info">
+                    <i class="material-icons">water_drop</i>
+                    <div>
+                        <h3 class="humidity-level">Humidity</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

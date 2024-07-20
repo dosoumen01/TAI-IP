@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="header">
+                <h2>TO-DO LIST</h2>
+                <button class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i id="dark-mode-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Create a new todo...">
+                <button id="add-task-btn"><i class="fas fa-plus"></i></button>
+            </div>
+            <ul id="list-container"></ul>
+            <div class="footer">
+                <span id="items-left">0 items left</span>
+                <div class="filters">
+                    <button id="filter-all" class="active">All</button>
+                    <button id="filter-active">Active</button>
+                    <button id="filter-completed">Completed</button>
+                </div>
+                <button id="clear-completed-btn">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

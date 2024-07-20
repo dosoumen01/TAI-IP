@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(15deg, #e9b7ce, #d3f3f1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    color: #d3f3f1;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5px;
+    background: linear-gradient(80deg, #e9b7ce, #d3f3f1);
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.581);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.todo-app {
+    background: linear-gradient(80deg, #e3dcdccc, #e0e9e9b9);
+    border-radius:  10px;
+    padding: 20px;
+    color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: #000000;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #f1f1f1;
+    color: #333333;
+    border-radius: 5px 0 0 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #000000;
+}
+
+button {
+    padding: 9px 20px;
+    background: linear-gradient(to right, #0f971c, #0f971c);
+    border: none;
+    color: rgb(245, 245, 245);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 5PX 5PX 0;
+    transition: border-color 0.3s, background 0.3s;
+    margin-left: 2px;
+}
+
+button:hover {
+    background: #ed0000;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+ul li {
+    padding: 12px 10px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+    background: #e0e0e0;
+}
+
+ul li span {
+    cursor: pointer;
+    color: #db0303;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+ul li span:hover {
+    color: #000000;
+    background: #f0f0f0; 
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    border-radius: 50%;
+    background: #ffd569;
+}
+
+ul li.checked::before {
+    background: #888;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer .filters {
+    display: flex;
+    gap: 10px;
+}
+
+.footer button {
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid #000000;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.footer button:hover {
+    background: #000000;
+    color: #f83d5c;
+}
+
+.footer .filters button {
+    border: 1px solid #000000;
+}
+
+.footer .filters button.active {
+    color:  #18bb06;
+}
+
+.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: white;
+}
+
+.dark-mode .container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .todo-app {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.dark-mode input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode ul li {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+}
+
+.dark-mode ul li.checked::before {
+    background: #9e9b9b;
+}
+
+.dark-mode .footer button {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.dark-mode .footer button:hover {
+    background: #fff;
+    color: #a80000;
+}
+
+.dark-mode .header h2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode-toggle {
+    padding: 10px;
+    background: #fbfbfb;
+    border: none;
+    color: #333333;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+    background: #e0e0e0;
+}
+
+.dark-mode .dark-mode-toggle {
+    background: #333333;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .dark-mode-toggle i {
+    color: #ffffff;
+}
+
+button:hover {
+    background: rgba(4, 149, 60, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background: rgba(219, 0, 0, 0.6);
+    box-shadow: inset 0 4px 6px rgba(119, 24, 24, 0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .dark-mode-toggle {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+
+    .footer button {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .dark-mode-toggle {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .footer button {
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+}

@@ -11,6 +11,6 @@
 - ### Responsive Design: Optimized for both desktop and mobile devices.
 
   ## Screenshots:
-
-![image](https://github.com/user-attachments/assets/d05f2a20-4c44-412e-92e8-43600c0d2319)
+  
+![image](https://github.com/user-attachments/assets/d16e7707-267b-4701-a5d6-058f9541cf51)
 ![image](https://github.com/user-attachments/assets/0794bed1-fb48-4745-9c57-3ef40c9bd504)
